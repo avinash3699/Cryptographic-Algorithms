@@ -39,16 +39,16 @@ public class CaesarCipher
         return encrypt(cipherText, shiftValue);
     }
     
-	public static void main(String[] args) {
-		
-		String plainText = "aBcDeFgHiJKLMNOPQRSTUVW xyz";
-		
-		String encrypted = encrypt(plainText, 3);
-		String decrypted = decrypt(encrypted, 26 - 3);
-		
-		System.out.println("Plain Text: " + plainText);
-		System.out.println("Encrypted Text: " + encrypted);
-		System.out.println("Decrypted Text: " + decrypted);
-		
-	}
+    public static void main(String[] args) {
+
+	String plainText = "aBcDeFgHiJKLMNOPQRSTUVW xyz";
+
+	String encrypted = encrypt(plainText, 3);
+	String decrypted = decrypt(encrypted, 26 - 3);
+
+	System.out.println("Plain Text: " + plainText);
+	System.out.println("Encrypted Text: " + encrypted);
+	System.out.println("Decrypted Text: " + decrypted);
+
+    }
 }
