@@ -30,12 +30,12 @@ def decrypt(ct,k):
         pt+=" "
     return pt    
 
+print("Enter Plaintext: ",end="")
 plaintext=input().strip()
+print("Enter key: ",end="")
 k=int(input())
 ciphertext=encrypt(plaintext,k)
-print(ciphertext)
+print("Ciphertext:",ciphertext)
 decryptedtext=decrypt(ciphertext,k)
-print(decryptedtext)
+print("Plaintext:",decryptedtext)
 
-
-    
