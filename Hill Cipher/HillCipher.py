@@ -16,12 +16,10 @@ def encrypt(text,key):
     
 print("Enter Plain Text:",end=" ")
 string=input().split()
-# print("Enter the key:")
-key=[[17,17,5],[21,18,21],[2,2,19]]
-# key=[list(map(int,input().split())) for i in range(3)]
+print("Enter the key:")
+key=[list(map(int,input().split())) for i in range(3)]
 ciphertext=""
 for i in string:
-    print(i)
     ciphertext+=encrypt(i,key)
     ciphertext+=" "
 print("The Cipher Text:",ciphertext)
