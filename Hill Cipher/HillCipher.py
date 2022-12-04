@@ -14,10 +14,8 @@ def encrypt(text,key):
             encryptedtext+=chr(ctvalue%26+97)
     return encryptedtext
     
-print("Enter Plain Text:",end=" ")
-string=input().split()
-print("Enter the key:")
-key=[list(map(int,input().split())) for i in range(3)]
+string=input("Enter Plain Text:").split()
+key=[list(map(int,input("Enter the key:").split())) for i in range(3)]
 ciphertext=""
 for i in string:
     ciphertext+=encrypt(i,key)
