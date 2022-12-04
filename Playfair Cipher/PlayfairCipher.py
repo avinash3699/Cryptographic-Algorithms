@@ -47,10 +47,8 @@ def swaps(matrix,pt):
             ciphertext+=(matrix[r1][c2]+matrix[r2][c1])
     return ciphertext
 
-print("Enter Plaintext: ",end="")
-plaintext=input().strip()
-print("Enter key: ",end="")
-key=input().strip()
+plaintext=input("Enter Plaintext: ").strip()
+key=input("Enter key: ").strip()
 k=matrixgen(key)
 pt=plaintextgen(plaintext)
 print("The Ciphertext is:",swaps(k,pt))
