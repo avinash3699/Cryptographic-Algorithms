@@ -12,8 +12,18 @@ def encrypt(text,key):
         ciphertext+=chr(alph)
     return ciphertext
     
+def decrypt(et,key):
+    plaintext=""
+    for i in range(len(et)):
+        alph=(ord(et[i])-ord(key[i]))
+        alph=(alph%26)+97
+        plaintext+=chr(alph)
+    return plaintext
+
 text=input("Enter plain text: ").strip()
 key=input("Enter key: ").strip()
 finalkey=keygen(text,key)
 ciphertext=encrypt(text,finalkey)
 print("The cipher text:",ciphertext)
+plaintext=decrypt(ciphertext,finalkey)
+print("The plain text:",plaintext)
